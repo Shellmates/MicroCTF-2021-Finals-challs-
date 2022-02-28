@@ -1,0 +1,32 @@
+name: "colourflage"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: forensics
+difficulty: medium
+
+description: |
+  > The colours Mason, what do they mean!?  
+  > Well, for sure we know it's a hex d-  
+  > ...  
+
+  **Author** : chenx3n
+
+connection_info: http://colourflage.forensics.ctf.microclub.net
+
+image: gcr.io/glowing-reserve-336013/colourflage
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+flags:
+  - shellmates{c4moUfLAg11IINg_ad7452833}
+
+state: visible
+
+version: "0.1"

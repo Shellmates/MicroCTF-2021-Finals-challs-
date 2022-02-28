@@ -1,0 +1,20 @@
+<% if ! flash.keys.empty? %>
+  <div class="flex flex-col items-center justify-center">
+    <% flash.each_entry do |category, message| %>
+      <div class="mt-5 bg-<%= category %>-100 border border-<%= category %>-400 text-<%= category %>-700 px-4 py-3 rounded relative min-w-max max-w-max transition-all duration-500 ease-in-out" role="alert">
+        <strong class="font-bold">Error!</strong>
+        <span class="block sm:inline"><%=h message %> <i class="btn-close cursor-pointer ml-2 fas fa-times"></i></span>
+      </div>
+    <% end %>
+  </div>
+  <script>
+    document.querySelector(".btn-close").addEventListener("click", function(event) {
+      event.preventDefault()
+      const div = this.parentElement.parentElement
+      div.classList.add("opacity-0")
+      setTimeout(() => {
+        div.style.display = "none"
+      }, 500)
+    })
+  </script>
+<% end %>

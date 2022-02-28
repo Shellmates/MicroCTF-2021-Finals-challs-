@@ -1,0 +1,32 @@
+name: "NFT"
+author: "Elghazali"
+author_link: "https://github.com/Elghazali-99"
+
+category: misc
+
+difficulty: ezmed
+
+description: |
+  > I'm an artist, I can make NFT art in addition to hiding some secrets HaHa!  
+  > Lemme test your programming skills to reveal this secret, but what type of programming? ;).  
+
+  **Flag format** : shellmates{the_secret}  
+
+  **Author** : Elghazali
+
+flags:
+  - shellmates{P31T_1S_COOL}
+
+files:
+  - ./NFT.png
+
+value: 500
+type: dynamic
+
+extra:
+    initial: 500
+    decay: 10
+    minimum: 50
+
+state: visible
+version: "0.1"

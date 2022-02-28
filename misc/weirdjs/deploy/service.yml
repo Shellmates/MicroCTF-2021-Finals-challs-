@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: weirdjs
+  labels:
+    category: misc
+    challenge: weirdjs
+spec:
+  type: NodePort
+  selector:
+    category: misc
+    challenge: weirdjs
+  ports:
+    - port: 1337
+      name: tcp
+      targetPort: 1337
+      nodePort: 30304

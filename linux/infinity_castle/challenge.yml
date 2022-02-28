@@ -1,0 +1,28 @@
+name: "infinity castle"
+author: "ouxs"
+author_link: "https://github.com/ouxs-19"
+
+category: linux
+difficulty: medium
+
+description: |
+  > Monitor, identify, exploit, repeat ...  
+
+  **Author** : ouxs
+
+connection_info: nc linux.ctf.microclub.net 1203
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+flags:
+  - shellmates{T|-|4t_WAS_such_4_*WILD*_C0MM4ND}
+
+state: visible
+
+version: "0.1"

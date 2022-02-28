@@ -1,0 +1,30 @@
+name: "RSA"
+author: "H4ith3m"
+author_link: "https://github.com/HaithemLamri"
+
+category: crypto
+difficulty: medium
+
+description: |
+  > RSA is oldies but goldies, I encrypted my flag with several public keys but I lost the private ones.  
+  > Can you recover my flag ?  
+
+  **Author** : H4ith3m
+
+flags:
+  - shellmates{Ch1n3s3_R3m1nd3r_7h3or3m}
+
+files:
+  - RSA.py
+  - RSA_output.txt
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+state: visible
+version: "0.1"

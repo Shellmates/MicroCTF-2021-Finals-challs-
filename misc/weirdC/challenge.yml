@@ -1,0 +1,35 @@
+name: "weirdC"
+author: "chenx3n"
+
+category: misc
+difficulty: medium
+
+description: |
+  > JS is weird, but C is even weirder!  
+
+  **Author** : chenx3n
+
+connection_info: nc misc.ctf.microclub.net 1305
+
+image: gcr.io/glowing-reserve-336013/weirdC
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+tags:
+  - reverse
+
+flags:
+  - shellmates{1nt3gEr_0V3rFL0O0ooO0oW}
+
+files:
+  - ./files/weird
+
+state: hidden
+
+version: "0.1"

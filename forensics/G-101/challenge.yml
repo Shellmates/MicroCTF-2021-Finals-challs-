@@ -1,0 +1,30 @@
+name: "G-101"
+author: "Yan1x0s"
+author_link: "https://github.com/Yanixos"
+
+category: forensics
+difficulty: medium
+
+description: |
+  > What's wrong with this file ?  
+  > Go back and study the 101  
+
+  **Author** : Yan1x0s
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+flags:
+  - shellmates{G1F_57RUCTUR3}
+
+files:
+  - chall.gif
+
+state: visible
+
+version: "0.1"

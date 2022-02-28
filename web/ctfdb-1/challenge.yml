@@ -1,0 +1,31 @@
+name: "ctfdb-1"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: web
+difficulty: ezmed
+
+description: |
+  > Check out my new CTF teams database!  
+
+  **Author** : chenx3n
+
+connection_info: http://ctfdb.web.ctf.microclub.net
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+flags:
+  - shellmates{$QlI_1$_N1c3_ANd_4LL_bUt_can_U_re4D_TH3_fl4g_FIL3??}
+
+files:
+  - ./files/ctfdb.zip
+
+state: visible
+
+version: "0.1"

@@ -1,0 +1,10 @@
+#!/bin/bash 
+
+PATH=$(/usr/bin/getconf PATH || /bin/kill $$)
+
+if [ "$(ls -A /home/zeta/work)" ];then 
+	cd /home/zeta/work
+	tar cvf /home/zeta/backup.tar *
+	rm /home/zeta/work/*
+fi
+sleep 10

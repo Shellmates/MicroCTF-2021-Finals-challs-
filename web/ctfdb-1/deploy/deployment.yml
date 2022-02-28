@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ctfdb
+  labels:
+    category: web
+    challenge: ctfdb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      category: web
+      challenge: ctfdb
+  template:
+    metadata:
+      labels:
+        category: web
+        challenge: ctfdb
+    spec:
+      hostAliases:
+      - ip: "127.0.0.1"
+        hostnames:
+          - "app"
+          - "db"
+      containers:
+      - name: app
+        image: gcr.io/glowing-reserve-336013/ctfdb_app
+        resources:
+          limits:
+            cpu: 200m
+            memory: 400Mi
+          requests:
+            cpu: 10m
+            memory: 30Mi
+        ports:
+        - containerPort: 4444
+          name: http
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+          initialDelaySeconds: 3
+          periodSeconds: 15
+      - name: db
+        image: gcr.io/glowing-reserve-336013/ctfdb_db
+        env:
+          - name: MYSQL_DATABASE
+            value: ctfdb
+          - name: MYSQL_ROOT_PASSWORD
+            value: 53654db66d94b4154783c1ee0b536920
+        volumeMounts:
+          - mountPath: /var/lib/mysql
+            name: mysql
+        resources:
+          limits:
+            cpu: 100m
+            memory: 150Mi
+          requests:
+            cpu: 10m
+            memory: 30Mi
+        ports:
+          - containerPort: 3306
+            name: mysql
+        readinessProbe:
+          tcpSocket:
+            port: mysql
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        livenessProbe:
+          tcpSocket:
+            port: mysql
+          initialDelaySeconds: 3
+          periodSeconds: 60
+      volumes:
+        - name: mysql
+          persistentVolumeClaim:
+            claimName: mysql

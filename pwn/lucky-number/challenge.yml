@@ -1,0 +1,36 @@
+name: "lucky number"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: pwn
+difficulty: ezmed
+
+description: |
+  > `Lucky Number` is an old school number guessing game that uses an incredibly fast but reliable random number generator.  
+  > Have fun !  
+
+  **Author** : chenx3n
+
+connection_info: nc pwn.ctf.microclub.net 1501
+
+image: gcr.io/glowing-reserve-336013/lucky-number
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+flags:
+  - shellmates{WHy_Us3_PrNGs_whEn_A$LR_dO_trICK}
+
+files:
+  - ./challenge/lucky_number
+  - ./lib/ld-2.27.so
+  - ./lib/libc-2.27.so
+
+state: visible
+
+version: "0.1"

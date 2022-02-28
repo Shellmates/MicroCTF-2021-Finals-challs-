@@ -1,0 +1,33 @@
+name: "weirdjs"
+author: "chenx3n"
+
+category: misc
+difficulty: medium
+
+description: |
+  > Can you find a, b and c such that `a^3 + b^3 = c^3`?  
+  > Mathematicians failed to prove that, but JS doesn't care about them!  
+
+  **Author** : chenx3n
+
+connection_info: nc misc.ctf.microclub.net 1304
+
+image: gcr.io/glowing-reserve-336013/weirdjs
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+flags:
+  - shellmates{YEAH_Js_1$_We1RD_wh4tS_N3W?}
+
+files:
+  - ./challenge/weird.js
+
+state: visible
+
+version: "0.1"

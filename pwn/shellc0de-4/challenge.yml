@@ -1,0 +1,34 @@
+name: "shellc0de-4"
+author: "chenx3n"
+author_link: "https://github.com/malikDaCoda"
+
+category: pwn
+difficulty: medhard
+
+description: |
+  > Prove to me you bypass seccomp filters for breakfast!  
+
+  **Author** : chenx3n
+
+connection_info: nc pwn.ctf.microclub.net 1503
+
+image: gcr.io/glowing-reserve-336013/shellc0de-4
+
+value: 500
+type: dynamic
+
+extra:
+  initial: 500
+  decay: 10
+  minimum: 50
+
+flags:
+  - shellmates{SEcc0MP_for_BreAkF4$t}
+
+files:
+  - ./src/shellc0de-4.c
+  - ./challenge/shellc0de-4
+
+state: visible
+
+version: "0.1"
